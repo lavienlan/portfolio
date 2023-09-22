@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>ArrayList Tutorial</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;600&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+	<link rel="stylesheet" href="pages.css">
+	<script defer src = "app.js"></script>
+	<header>
+		<h1>Portfolio '23.</h1>
+		<nav>
+			<ul>
+				<li>
+					<a href="index.html"># homepage </a>
+				</li>
+				<li>
+					<a href="#tutorials"># tutorials </a>
+					<ul class = "dropdown">
+						<li><a href="oop.html">OOP</a></li>
+						<li><a href="arrays.html">arrays</a></li>
+						<li><a href="arraylist.html">arraylist</a></li>
+						<li><a href="search-sort.html">search and sort</a></li>
+						<li><a href="recursion.html">recursion</a></li>
+					</ul>
+					<li><a href="isp.html"># final project</a></li>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<h1 class = "name arraylist_title" >ArrayLists.</h1>
+		<div class = "tutorial">
+			<h2 class = "subtitle"> What is an ArrayList?</h2>
+			<div class = "textbox hidden">
+				<p> 
+					In Java, the ArrayList is a class used to implement the functionality of a 
+                    dynamic/resizable array, which can grow or shrink automatically based on the 
+                    number of elements present in it which provides a more flexible way of storing 
+                    and manipulating data.
+				</p>
+				<br>
+				<h2 class = "subtitle">Creating an ArrayList</h2>
+				<p>
+					To create an ArrayList in Java, you need to import the <strong>java.util.ArrayList</strong>
+                    package and use the ArrayList class. Keep in mind that you can not use primitive data 
+                    types for your ArrayLists and instead, must use the corresponding wrapper class (Integer, Double).
+                    <br><br>
+                    <strong><mark>
+                    import java.util.ArrayList; <br>
+                    ArrayList<String> animals = new ArrayList<String>();
+                    </mark></strong>
+                    <br><br>
+                    The code above creates an empty ArrayList of strings named 'animals'.
+                    <br>
+                    Now let’s take a look at some of the basic operations that can be done to an ArrayList.
+				</p>
+				<br>
+				<h2 class = "subtitle">Adding Elements to an ArrayList</h2>
+				<p>
+					To add elements to an ArrayList, you can use the <strong>add()</strong> method: 
+                    <br><br>
+                    <strong><mark>
+                    animals.add("Piglet"); <br>
+                    animals.add("Rabbit"); <br>
+                    animals.add("Mouse"); <br>
+                    </mark></strong>
+                    <br>
+                    The above code adds three string elements to the ArrayList animals.
+				</p>
+                <br>
+				<h2 class = "subtitle">Accessing Elements of an ArrayList</h2>
+				<p>
+					You can access elements of an ArrayList using the <strong>get()</strong> method: <br><br>
+                    <strong><mark>
+                    System.out.println(animals.get(0));<br>
+                    System.out.println(animals.get(1));<br>
+                    System.out.println(animals.get(2));<br>
+                    </mark></strong>
+                    <br>
+                    This code accesses the first, second, and third elements of the ArrayList animals 
+                    using their respective indexes.
+				</p>
+				<br>
+				<h2 class = "subtitle">Removing Elements from an ArrayList</h2>
+				<p>
+					You can remove an element from an ArrayList using the <strong>remove()</strong> method: 
+                    <br><br>
+                    <strong><mark>animals.remove(1); 
+                    </mark></strong>
+                    <br><br> 
+                    Removes the second element (Rabbit).
+				</p>
+				<br>
+				<h2 class = "subtitle">Modifying Elements of an ArrayList</h2>
+				<p>
+					You can modify an element of an ArrayList using the <strong>set()</strong> method:
+                    <br><br>
+                    <strong><mark>animals.set(0, "Lion");</mark></strong> 
+                    <br><br>
+                    Changes the first element (Piglet) to Lion.
+				</p>
+				<br>
+				<h2 class = "subtitle">Size of an ArrayList</h2>
+				<p>
+					You can find the size of an ArrayList using the <strong>size()</strong> method:
+                    <br><br>
+                    <strong><mark>System.out.println(animals.size());</mark></strong>
+                    <br><br>
+                    Outputs the length: 3.
+                </p>
+                <br>
+                <h2 class = "subtitle"> Iterating over an ArrayList </h2>
+                <p>
+                    You can use a for loop to iterate over all the elements of an ArrayList:
+                    <br><br>
+                    <strong><mark><pre></pre>for (String x : animals) {<br>     System.out.println(x);<br>}</mark></strong>
+                    <br><br>
+                    This can be read as “for x in animals” and will iterate over all the elements 
+                    of the Arraylist animals and print them to the console.
+                </p>
+                <br>
+                <h2 class = "subtitle"> Quick Conclusion </h2>
+                <p>
+                    In this tutorial, we learned about ArrayLists in Java. We saw how to create an 
+                    ArrayList, add, access, remove, and modify elements of an ArrayList. We also 
+                    learned how to find the size of an ArrayList and how to iterate over its elements. 
+                    With its dynamic nature, ArrayList provides a more flexible approach of storing 
+                    and manipulating data in Java and can hopefully help you in future code!
+                </p>
+
+			</div>
+		</div>
+		<section id="sources">
+			<h2>Sources</h2>
+			<p class="links"><a href="https://www.w3schools.com/java/java_arraylist.asp">https://www.w3schools.com/java/java_arraylist.asp</a></p> 
+		</section>
+	</main>
+	<footer>
+		<p id = "copyright">&copy; Rachel Jing | You've reached the end of the page </p>
+	</footer>
+</body>
+</html>

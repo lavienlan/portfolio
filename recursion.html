@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Recursion Tutorial</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;600&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+	<link rel="stylesheet" href="pages.css">
+	<script defer src = "app.js"></script>
+	<header>
+		<h1>Portfolio '23.</h1>
+		<nav>
+			<ul>
+				<li>
+					<a href="index.html"># homepage </a>
+				</li>
+				<li>
+					<a href="#tutorials"># tutorials </a>
+					<ul class = "dropdown">
+						<li><a href="oop.html">OOP</a></li>
+						<li><a href="arrays.html">arrays</a></li>
+						<li><a href="arraylist.html">arraylist</a></li>
+						<li><a href="search-sort.html">search and sort</a></li>
+						<li><a href="recursion.html">recursion</a></li>
+					</ul>
+					<li><a href="isp.html"># final project</a></li>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<h1 class = "name recursion_title" >Recursion.</h1>
+		<div class = "tutorial">
+			<h2 class = "subtitle"> What is recursion?</h2>
+			<div class = "textbox hidden">
+				<p> 
+					Recursion is a programming technique where a function calls itself to solve a problem. 
+                    It is a powerful tool that can simplify complex problems by breaking them down into 
+                    smaller, more manageable sub-problems. Recursion involves two key elements: the base 
+                    case and the recursive case. The base case is the simplest version of the problem that 
+                    can be solved without recursion. The recursive case is where the function calls itself 
+                    to solve a more complex version of the problem. There is also a common error called a
+                    stack overflow error. This occurs when a program exhausts the amount of memory allocated 
+                    to its call stack, resulting in a "stack overflow". This can happen when there is 
+                    excessive recursion or when a function calls itself indefinitely (no base case).
+                    <br><br>
+                    Here is an example of a recursive function that calculates the factorial of a given number:
+                    <br><br>
+                    <strong><mark>public static int factorial(int n) {</mark>
+                    <pre>     <mark>if (n == 0) {</mark><br>          <mark>return 1;   // base case</mark><br></pre>   
+                    <pre>     <mark>} else {</mark><br>          <mark>return n * factorial(n-1);   // recursive case</mark><br></pre>    
+                    <pre>     <mark>}</mark><br><mark>}</mark></pre>       
+                     <br><br>
+                     In this example, the base case is when n equals 0, and the function simply returns 1. The 
+                     recursive case is when n is greater than 0, and the function calls itself with n-1 as the 
+                     argument until it reaches the base case.<br><br>
+                     <img src="recursion.jpg">
+				</p>
+				<br>
+			</div>
+		</div>
+		<section id="sources">
+			<h2>Sources</h2>
+			<p class="links"><a href="https://www.programiz.com/java-programming/recursion">https://www.programiz.com/java-programming/recursion</a></p> 
+		</section>
+	</main>
+	<footer>
+		<p id = "copyright">&copy; Rachel Jing | You've reached the end of the page </p>
+	</footer>
+</body>
+</html>

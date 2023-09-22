@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Search and Sort Tutorial</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;600&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+	<link rel="stylesheet" href="pages.css">
+	<script defer src = "app.js"></script>
+	<header>
+		<h1>Portfolio '23.</h1>
+		<nav>
+			<ul>
+				<li>
+					<a href="index.html"># homepage </a>
+				</li>
+				<li>
+					<a href="#tutorials"># tutorials </a>
+					<ul class = "dropdown">
+						<li><a href="oop.html">OOP</a></li>
+						<li><a href="arrays.html">arrays</a></li>
+						<li><a href="arraylist.html">arraylist</a></li>
+						<li><a href="search-sort.html">search and sort</a></li>
+						<li><a href="recursion.html">recursion</a></li>
+					</ul>
+					<li><a href="isp.html"># final project</a></li>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<h1 class = "name search_title" >Search and Sort.</h1>
+		<div class = "tutorial">
+			<h2 class = "subtitle"> What is search and sort?</h2>
+			<p class="textbox">
+				In computer science, sorting and searching are fundamental operations. They are used 
+				to arrange data in a particular order or search for specific data in a collection of 
+				data. We will be going through some of the most common sorting algorithms as well as 
+				a personal favourite at the end! Take a look at the photos below and test your knowledge;
+				hover over them to see the correct answer!
+			</p>
+			<div class="container">
+				<div class="box">
+					<img src="selection_sortpng.png">
+					<a class="overlay" href="#selection">Selection Sort</a>
+					<a href="#selection"></a>
+				</div>
+				<div class="box">
+					<img src="insertion_sort.png">
+					<div class="overlay">Insertion Sort</div>
+					<a href="#insertion"></a>
+				</div>
+			</div>
+			
+			<div class = "textbox hidden">
+				<h2 class = "subtitle"> Selection Sort</h2>
+				<p> 
+					Selection sort is a simple sorting algorithm that works by repeatedly finding 
+					the minimum element from the unsorted array and moving it to the beginning of 
+					the array on each iteration. 
+					<br><br>
+					Let’s take a look at the code:
+					<br><br>
+					<pre><strong><mark>public static void selectionSort(int[] arr) {</mark><br>     <mark>int size = arr.length;</mark><br>     <mark>for (int i = 0; i < size - 1; i++) {</mark></pre>
+					<pre>          <mark>int minIndex = i;</mark><br>          <mark>for (int j = i + 1; j < size; j++) {</mark></pre>
+					<pre>               <mark>if (arr[j] < arr[minIndex]) {</mark><br>                    <mark>minIndex = j;</mark><br>               <mark>}</mark><br></pre>
+					<pre>          <mark>}</mark><br>          <mark>int temp = arr[minIndex];</mark><br>          <mark>arr[minIndex] = arr[i];</mark><br>          <mark>arr[i] = temp;</mark></pre>
+					<pre>     <mark>}</mark></pre><mark>}</mark>		
+					</mark></strong></pre>
+					<br><br>
+					Now let’s break down this code:<br>
+					1. ‘size = arr.length’ gets the length of the parameter array ‘arr’.<br>
+					2. The outer loops size-1 times.<br>
+					3. ‘minIndex = i' initializes 'minIndex' to the index of the first unsorted element.<br>
+					4. The inner loop iterates from 'j = i + 1' to 'j = size - 1'.<br>
+					5. 'if (arr[j] < arr[minIndex])' checks if the current element at index 'j' is less than the current minimum element at index 'minIndex'. 
+					If it is, then 'minIndex = j' updates the index of the minimum element.<br>
+					6. After the inner loop has finished, the minimum element of the unsorted subarray is swapped with the 
+					first unsorted element in the sorted subarray. This is done by swapping 'arr[minIndex]' with 'arr[i]'.<br>
+					7. The outer loop continues until the entire array is sorted.<br>
+				</p>
+				<section id="insertion"></section>
+				<br>
+				<h2 class = "subtitle">Insertion Sort</h2>
+				<p>
+					Insertion sort is another simple sorting algorithm that works by repeatedly inserting an element from 
+					the unsorted part of the array into its correct position in the sorted part of the array. 
+					<br><br>
+					Let’s take a look at the code:
+					<br><br>
+					<pre><strong><mark>public static void insertionSort(int[] arr) {</mark><br>     <mark>int size = arr.length;</mark><br>     <mark>for (int i = 1; i < size; i++) {</mark></pre>
+					<pre>          <mark>int key = arr[i];</mark><br>          <mark>int j = i - 1;</mark><br>          <mark>while (j >= 0 && arr[j] > key) {</mark></pre>
+					<pre>               <mark>arr[j + 1] = arr[j];</mark><br>               <mark>j--;</mark><br>          <mark>}</mark><br></pre>
+					<pre>          <mark>arr[j + 1] = key;</mark></pre>
+					<pre>    <mark>}</mark></pre><mark>}</mark>		
+					</mark></strong></pre>
+					<br><br>
+					Now let’s break down this code:<br>
+					1. ‘size = arr.length' gets the length of the input array 'arr'.<br>
+					2. The outer loop iterates from ‘i = 1’ until i is equal to the size.<br>
+					3. The while loop then compares each element to the value left of it until it finds one smaller.<br>
+					4. Once the while loop finds an element that is smaller than the value to its left, it swaps the 
+					two values and continues to compare the newly swapped element with the value to its left until it 
+					finds a value that is not smaller. <br>
+					5. The outer loop then moves to the next element and repeats the process, iterating through the 
+					entire array until all elements are sorted in ascending order.<br><br>
+				</p>
+				<br>
+                <br>
+                <h2 class = "subtitle"> Gnome Sort </h2>
+				<p>
+					Gnome Sort, also known as Stupid Sort, is a simple sorting algorithm that sorts an array 
+					by repeatedly swapping adjacent elements that are not in the correct order. This process 
+					is similar to the way a gnome sorts his flower pots in a garden, hence the name Gnome Sort.
+					<br><br>
+					Let’s take a look at the code:
+					<br>
+					<pre><strong><mark>public static void gnomeSort(int[] arr) {</mark><br>     <mark>int index = 0;</mark><br>     <mark>int len = arr.length;</mark>
+					<br>     <mark>while (index < len) {</mark><br>          <mark>if (index == 0 || arr[index] >= arr[index - 1]) {</mark><br></pre>
+					<pre>               <mark>index++;</mark><br>          <mark>} else {</mark><br>               <mark>int temp = arr[index];</mark><br></pre>
+					<pre>               <mark>arr[index] = arr[index - 1];</mark><br>               <mark>arr[index - 1] = temp;</mark><br></pre>
+					<pre>               <mark>index--;</mark><br>          <mark>}</mark><br>     <mark>}</mark><br><mark>}</mark></pre>
+					</pre></strong>		
+					Now let’s break down this code:<br><br>
+					1. ‘int index = 0’ sets what is basically the starting position for the gnome (the first index of the array). 
+					The other integer variable ‘len’ is initialized to the length of the array.<br>
+					2. The while loop iterates until ‘index’ is greater than or equal to ‘len’.<br>
+					3. Inside the while loop, the program checks for if the current element is greater than or equal to the 
+					previous element. If so, the two values are sorted so the ‘index’ increments (the gnome takes a step forward).<br>
+					4. If not, the program swaps the two values and ‘index’ is decremented.<br>
+					5. The program (gnome) keeps taking a step backward and forward, checking if everything is sorted, until it 
+					reaches the end of the loop and everything is sorted!<br>
+				</p>
+			</div>
+		</div>
+		<section id="sources">
+			<h2>Sources</h2>
+			<p class="links"><a href="https://www.programiz.com/dsa/selection-sort">https://www.programiz.com/dsa/selection-sort</a></p> 
+			<p class="links"><a href="https://www.programiz.com/dsa/insertion-sort">https://www.programiz.com/dsa/insertion-sort</a></p> 
+			<p class="links"><a href="https://www.geeksforgeeks.org/gnome-sort-a-stupid-one">https://www.geeksforgeeks.org/gnome-sort-a-stupid-one</a></p>	
+		</section>
+	</main>
+	<footer>
+		<p id = "copyright">&copy; Rachel Jing | You've reached the end of the page </p>
+	</footer>
+</body>
+</html>
+

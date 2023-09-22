@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>OOP Tutorial</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;600&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+	<link rel="stylesheet" href="pages.css">
+	<script defer src = "app.js"></script>
+	<header>
+		<h1>Portfolio '23.</h1>
+		<nav>
+			<ul>
+				<li>
+					<a href="index.html"># homepage </a>
+				</li>
+				<li>
+					<a href="#tutorials"># tutorials </a>
+					<ul class = "dropdown">
+						<li><a href="oop.html">OOP</a></li>
+						<li><a href="arrays.html">arrays</a></li>
+						<li><a href="arraylist.html">arraylist</a></li>
+						<li><a href="search-sort.html">search and sort</a></li>
+						<li><a href="recursion.html">recursion</a></li>
+					</ul>
+					<li><a href="isp.html"># final project</a></li>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<h1 class = "name oop_title" >Object-Oriented Programming.</h1>
+		<div class = "tutorial">
+			<h2 class = "subtitle"> What is OOP?</h2>
+			<div class = "textbox hidden">
+				<p> 
+					OOP stands for Object-Oriented Programming, which is a programming 
+					computer programming model that is based on the concept of objects. 
+					Java is an object-oriented programming language, which means that it
+					is designed to support the creation and manipulation of objects. In 
+					Java, you can create classes that define the attributes and behaviors
+					of objects, and then create instances of those classes to represent 
+					specific objects.
+				</p>
+				<br>
+				<img src="cars_example.webp" alt="cars example" style="float:left;width:50%;height:50%;margin-right: 50px;">
+				<p>
+					To put it more simply, it is a way of writing computer programs that 
+					focuses on the concept of "objects". Much like a tangible, real-life object, 
+					an object is a thing that has certain characteristics (also called 
+					"attributes" or "properties") that can do certain things (also called "methods"
+					 or "behaviors"). For example, you could think of a car as an object. It has 
+					 attributes like color and model, and it can do things like accelerate, brake, 
+					 and turn. When you write a program using OOP in Java, you define classes that 
+					 describe the objects in your program. A class is like a blueprint or a recipe 
+					 for creating objects. It defines the attributes and behaviors that all objects 
+					 of that class will have. For example, you could define a class called "Car" 
+					 that has attributes like "color" and "model", and behaviors like "accelerate", 
+					 "brake", and "turn". Then, you could create individual objects of that class 
+					 that represent specific cars, each with their own values for the attributes.
+				</p>
+				<br>
+				<h2 class = "subtitle"> Other Terms</h2>
+				<br>
+				<p>
+					<strong>Encapsulation:</strong> hide the inner workings of an object from the outside world, and 
+					only expose a public interface that can be used to interact with the object. 
+					This helps to ensure that the object's state remains consistent and that it 
+					can't be accessed or modified in unexpected ways. Access modifiers, namely 
+					private and public.
+					<br><br>
+					<strong>Inheritance:</strong> ability to create new classes that are based on existing classes, and 
+					inherit their attributes and behaviors. This allows you to create more specific 
+					classes that share common attributes and behaviors with their parent classes. 
+
+				</p>
+			</div>
+		</div>
+		<section id="sources">
+			<h2>Sources</h2>
+			<p class="links"><a href="https://www.scaler.com/topics/java/oop-vs-functional-vs-procedural/">https://www.scaler.com/topics/java/oop-vs-functional-vs-procedural/</a></p> 
+		</section>
+	</main>
+	<footer>
+		<p id = "copyright">&copy; Rachel Jing | You've reached the end of the page </p>
+	</footer>
+</body>
+</html>
